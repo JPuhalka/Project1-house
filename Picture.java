@@ -13,8 +13,9 @@ public class Picture
 {
     private Square wall;
     private Square window;
-    private Triangle roof;
+    private Triangle grass;
     private Circle sun;
+    private Person guy;
 
     /**
      * Constructor for objects of class Picture
@@ -29,31 +30,54 @@ public class Picture
      */
     public void draw()
     {
-        wall = new Square();
-        wall.moveHorizontal(-140);
-        wall.moveVertical(20);
-        wall.changeSize(120);
-        wall.makeVisible();
+      
+        grass = new Triangle(); 
+        grass.changeColor("green");
+        grass.changeSize(50, 180);
+        grass.moveHorizontal(-40);
+        grass.moveVertical(85);
+        grass.makeVisible();
+        
+        grass = new Triangle(); 
+        grass.changeColor("green");
+        grass.changeSize(60, 180);
+        grass.moveHorizontal(50);
+        grass.moveVertical(75);
+        grass.makeVisible();
+        
+        grass = new Triangle(); 
+        grass.changeColor("green");
+        grass.changeSize(50, 180);
+        grass.moveHorizontal(150);
+        grass.moveVertical(85);
+        grass.makeVisible();
+        
+        grass = new Triangle(); 
+        grass.changeColor("green");
+        grass.changeSize(60, 180);
+        grass.moveHorizontal(-150);
+        grass.moveVertical(75);
+        grass.makeVisible();
+
+        sun = new Circle();
+        sun.changeColor("light blue");
+        sun.moveHorizontal(100);
+        sun.moveVertical(40);
+        sun.changeSize(80);
+        sun.makeVisible();
+        
+        guy = new Person();
+        guy.changeColor("red");
+        guy.moveHorizontal(20);
+        guy.moveVertical(20);
+        guy.makeVisible();
         
         window = new Square();
         window.changeColor("black");
-        window.moveHorizontal(-120);
+        window.moveHorizontal(120);
         window.moveVertical(40);
         window.changeSize(40);
         window.makeVisible();
-
-        roof = new Triangle();  
-        roof.changeSize(60, 180);
-        roof.moveHorizontal(20);
-        roof.moveVertical(-60);
-        roof.makeVisible();
-
-        sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
-        sun.makeVisible();
     }
 
     /**
@@ -65,7 +89,7 @@ public class Picture
         {
             wall.changeColor("black");
             window.changeColor("white");
-            roof.changeColor("black");
+            grass.changeColor("black");
             sun.changeColor("black");
         }
     }
@@ -79,7 +103,7 @@ public class Picture
         {
             wall.changeColor("red");
             window.changeColor("black");
-            roof.changeColor("green");
+            grass.changeColor("green");
             sun.changeColor("yellow");
         }
     }
